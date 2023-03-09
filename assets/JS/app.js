@@ -28,11 +28,13 @@ function generatePassword(length) {
     else if((uppercase.checked) && lowercase.checked){ // 1 and 2
         charactes = values.slice(0,52)
     }
-    else if((uppercase.checked) && lowercase.checked){ // 1 and 3
-        charactes = values.slice(0,26) && values.slice(26,52)
+    else if((uppercase.checked) && numbers.checked){ // 1 and 3
+        charactes = values.slice(0,26) 
+        charactes += values.slice(52,62)
     }
-    else if((uppercase.checked) && lowercase.checked){ // 1 and 4
-        charactes = values.slice(0,26) && values.slice(62,72)
+    else if((uppercase.checked) && symbols.checked){ // 1 and 4
+        charactes = values.slice(0,26) 
+        charactes += values.slice(62,72)
     }
     else if(uppercase.checked) { // 1
         charactes = values.slice(0,26)
